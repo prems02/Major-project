@@ -127,6 +127,9 @@ app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/",userRouter);
 
+app.get("/", (req, res) => {
+    res.redirect("/listings"); // or render your own homepage if exists
+});
 
 
 
